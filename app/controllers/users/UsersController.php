@@ -28,4 +28,12 @@ class UsersController{
         }
         
     }
+
+    public function delete()
+    {
+        $userModel = new User();
+        $userModel ->delete($_GET['id']);
+
+        header("Location:/blogOOP/index.php?page=users");
+    }
 }

@@ -10,20 +10,23 @@ class Router
             case ' ':
             case 'home':
                 $controller = new HomeController();
-                $controller -> index();
+                $controller->index();
                 break;
             case 'users':
                 $controller = new UsersController();
-                if( isset($_GET['action'])){
-                    switch ($_GET['action']){
+                if (isset($_GET['action'])) {
+                    switch ($_GET['action']) {
                         case 'create':
                             $controller->create();
                             break;
                         case 'store':
-                            $controller -> store();
-                            break;    
+                            $controller->store();
+                            break;
+                        case 'delete':
+                            $controller->delete();
+                            break;
                     }
-                } else{
+                } else {
                     $controller->index();
                 }
                 break;
@@ -33,4 +36,4 @@ class Router
                 break;
         }
     }
-} 
+}

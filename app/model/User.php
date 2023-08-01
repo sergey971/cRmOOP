@@ -45,4 +45,26 @@ class User
             return false;
         }
     }
+
+    public function delete($id)
+    {
+        // $stmt = $this->db->prepare("DELETE FROM users WHERE `users`.`id` = ?");
+        // $stmt -> bind_param('id', $id);
+        // if($stmt->execute()){
+        //     return true;
+        // }else{
+        //     return false;
+        // }
+        $query = ("DELETE FROM users WHERE `users`.`id` = :id");
+        try{
+            $stmt = $this->db->prepare($query);
+            $stmt -> execute([
+                ':id' => $id
+            ]);          
+            return true;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            return false;
+        }
+    }
 }
