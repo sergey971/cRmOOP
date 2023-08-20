@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a href="index.php" class="navbar-brand">Crm-for-telegram</a>
+            <a href="./index.php" class="navbar-brand">Crm-for-telegram</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">

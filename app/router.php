@@ -5,9 +5,8 @@ class Router
     public function run()
     {
         $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
         switch ($page) {
-            case ' ':
+            case '':
             case 'home':
                 $controller = new HomeController();
                 $controller->index();
@@ -24,6 +23,12 @@ class Router
                             break;
                         case 'delete':
                             $controller->delete();
+                            break;
+                        case 'edit':
+                            $controller->edit();
+                            break;
+                        case 'update':
+                            $controller->update();
                             break;
                     }
                 } else {

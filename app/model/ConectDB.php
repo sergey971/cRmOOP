@@ -12,6 +12,7 @@ class ConectDB
     private $password = 'mysql';
 
     public function __construct()
+    
     {
         try {
             $dsn = "mysql:host={$this->host}; dbname={$this->nameDB};charset=utf8mb4";
